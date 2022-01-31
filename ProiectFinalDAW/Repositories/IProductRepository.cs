@@ -9,5 +9,7 @@ namespace ProiectFinalDAW.Repositories
     public interface IProductRepository : IGenericRepository<Product>
     {
         Product GetbyProduct(string name);
+        Product ProductPriceRange(int min, int max);
+        ICollection<Tuple<int, string>> ProductsByCategory();
     }
 }
